@@ -1,0 +1,199 @@
+/* @theme dlr */
+
+@import 'default';
+
+/* -- taken from ouranos.css -- */
+/* Title Slide */
+section.title {
+    align-items: center;
+    justify-content: center;
+}
+section.title h1 {
+    margin-bottom: 0px;
+    font-size: 2.5em;
+}
+section.title h2 {
+    margin-top: 0.7em;
+    font-size: 1.2em;
+}
+
+/* Chapter Slide */
+section.chapter {
+    align-items: center;
+    justify-content: center;
+}
+section.chapter h1 {
+    margin-bottom: 0px;
+    font-size: 2.5em;
+}
+section.chapter h2 {
+    margin-top: 0.7em;
+    font-size: 1.2em;
+}
+
+/* Columns */
+section div.columns {
+    display: flex;
+    flex-direction: row;
+}
+section div.columns * {
+    flex: 1 1 0;
+}
+
+/* -- start of actual dlr theme */
+
+:root {
+    font-family: Arial, Helvetica, sans-serif;
+    --accent-color: rgb(0, 101, 139);
+    --subheading-bg-color: rgba(0, 51, 69, 0.8);
+    --left-border-width: 35px;
+    --subheading-padding-top: 15px; /* use this to center text */
+    --title-bg-image: url('dlr-title-bg.jpg');
+    --company-logo: url('dlr-logo.svg')
+}
+
+section {
+    box-shadow: inset var(--left-border-width) 0px var(--accent-color);
+    justify-content: start;
+    padding-top: 40px;
+}
+
+section::after {
+    position: absolute;
+    text-align: center;
+    width: var(--left-border-width);
+    padding: 0;
+    left: 0px;
+    bottom: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+section footer {
+    margin: 0;
+    position: absolute;
+    left: 100px;
+    bottom: 15px;
+    color: var(--header-footer-color);
+    font-size: 18px;
+}
+
+/* dlr logo */
+section::before {
+    content: '';
+    position: absolute;
+    background-image: var(--company-logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 40px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    color: rgb(127, 127, 127);
+    min-height: 2.5em;
+    padding-right: 90px;
+}
+
+
+ul, ol {
+    padding-left: 30px;
+} 
+ul > li {
+    list-style-type: square;
+}
+ol > li {
+    list-style-type: decimal;
+    padding-left: 10px;  /* yes, this padding only for ol */
+}
+
+/* title slide */
+section.title {
+    --left-border-width: 70px;
+    background-image: var(--title-bg-image);
+    background-size: cover;
+    justify-content: end;
+}
+
+section.title h1 {
+    text-transform: uppercase;
+    font-size: 1.9em;
+    position: absolute;
+    left: 150px;
+    right: 100px;
+    bottom: 50%;
+}
+
+
+section.title h2 {
+    font-size: 0.9em;
+    position: absolute;
+    top: 50%;
+    left: var(--left-border-width);
+    right: 200px;
+    padding: var(--subheading-padding-top) 75px 0px calc(150px - var(--left-border-width));
+    background-color: var(--subheading-bg-color);
+    height: 130px;
+    overflow: visible;
+    color: white;
+    box-sizing: border-box;
+}
+
+
+/* dlr logo */
+section.title::before {
+    top: unset;
+    bottom: 10px;
+    right: 25px;
+    width: 150px;
+    height: 150px;
+}
+
+/* chapter slide */
+section.chapter {
+    background-image: var(--title-bg-image);
+    background-size: cover;
+    justify-content: end;
+}
+
+section.chapter h1 {
+    text-transform: uppercase;
+    font-size: 1.9em;
+    position: absolute;
+    left: var(--left-border-width);
+    right: 150px;
+    bottom: 80px;
+    height: 130px;
+    background-color: var(--subheading-bg-color);
+    color: white;
+    padding: 0px 40px;
+    line-height: 130px;
+    box-sizing: border-box;
+}
+
+
+/* dlr logo */
+section.chapter::before {
+    filter: invert() brightness(1000%);
+}
+
+/* some slides have an additional field at the bottom */
+/* background color is transparent here but not in original */
+section div.additions {
+    color: white;
+    background-color: var(--subheading-bg-color); /* ^ comment above */
+    position: absolute;
+    left: var(--left-border-width);
+    bottom: 50px;
+    height: 130px;
+    right: 78.5px;;
+    line-height: 100%;
+    padding: 15px 35px;
+    box-sizing: border-box;
+}
