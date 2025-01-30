@@ -3,6 +3,7 @@
 Unofficial Marp DLR theme.
 
 URL to use this theme:
+
 `https://raw.githubusercontent.com/joh-lin/marp-dlr-theme/refs/heads/main/dlr.css`
 
 Supports following syntax:
