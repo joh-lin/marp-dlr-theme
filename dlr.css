@@ -47,6 +47,7 @@ section div.columns * {
     --accent-color: rgb(0, 101, 139);
     --subheading-bg-color: rgba(0, 51, 69, 0.8);
     --left-border-width: 35px;
+    --title-size: 1.9em;
 }
 
 section {
@@ -120,7 +121,7 @@ section.title {
 
 section.title h1 {
     text-transform: uppercase;
-    font-size: 1.9em;
+    font-size: var(--title-size);
     position: absolute;
     left: 150px;
     right: 100px;

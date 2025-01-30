@@ -9,14 +9,10 @@ footer: 'Johannes Lingk'
 
 <!-- _class: title -->
 
-<style>
-:root {
-    --subheading-padding-top: 45px;
-}
-</style>
 
 # This is the title
-## And this is the subheading
+## And this is the subheading 
+
 by Johannes Lingk
 
 ---
