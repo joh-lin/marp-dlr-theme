@@ -47,7 +47,6 @@ section div.columns * {
     --accent-color: rgb(0, 101, 139);
     --subheading-bg-color: rgba(0, 51, 69, 0.8);
     --left-border-width: 35px;
-    --subheading-padding-top: 15px; /* use this to center text */
 }
 
 section {
@@ -135,12 +134,12 @@ section.title h2 {
     top: 50%;
     left: var(--left-border-width);
     right: 200px;
-    padding: var(--subheading-padding-top) 75px 0px calc(150px - var(--left-border-width));
+    padding: 20px 75px 20px calc(150px - var(--left-border-width));
     background-color: var(--subheading-bg-color);
-    height: 130px;
     overflow: visible;
     color: white;
     box-sizing: border-box;
+    min-height: 0px;
 }
 
 
